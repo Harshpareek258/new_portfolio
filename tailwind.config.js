@@ -47,6 +47,7 @@ export default {
         'bounce-slow': 'bounce 3s infinite',
         'gradient-x': 'gradient-x 3s ease infinite',
         'fade-in': 'fadeIn 1s ease-out forwards',
+        'spin-slow': 'spin 8s linear infinite',
       },
       backdropBlur: {
         xs: '2px',
