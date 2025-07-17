@@ -7,11 +7,11 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 relative overflow-hidden">
+    <footer className="bg-gray-800 border-t border-gray-700 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-red-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-1/4 w-64 h-64 bg-red-600/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               Made with 
               <Heart className="w-4 h-4 text-red-500 animate-pulse" /> 
               by 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500 font-semibold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600 font-semibold">
                 Harsh Pareek
               </span>
             </p>
@@ -33,16 +33,16 @@ const Footer: React.FC = () => {
 
           {/* Center - Quick Links */}
           <div className="flex gap-6 mb-6 md:mb-0">
-            <a href="#about" className="text-gray-400 hover:text-teal-400 transition-colors duration-200 text-sm">
+            <a href="#about" className="text-gray-400 hover:text-red-500 transition-colors duration-200 text-sm">
               About
             </a>
-            <a href="#skills" className="text-gray-400 hover:text-teal-400 transition-colors duration-200 text-sm">
+            <a href="#skills" className="text-gray-400 hover:text-red-500 transition-colors duration-200 text-sm">
               Skills
             </a>
-            <a href="#projects" className="text-gray-400 hover:text-teal-400 transition-colors duration-200 text-sm">
+            <a href="#projects" className="text-gray-400 hover:text-red-500 transition-colors duration-200 text-sm">
               Projects
             </a>
-            <a href="#contact" className="text-gray-400 hover:text-teal-400 transition-colors duration-200 text-sm">
+            <a href="#contact" className="text-gray-400 hover:text-red-500 transition-colors duration-200 text-sm">
               Contact
             </a>
           </div>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
             </p>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-all duration-300 hover:scale-105 cursor-pointer"
+              className="inline-flex items-center gap-2 text-red-500 hover:text-red-400 transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               <ArrowUp size={16} />
               <span className="text-sm">Back to top</span>
@@ -63,8 +63,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom border with gradient */}
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="w-full h-1 bg-gradient-to-r from-transparent via-teal-500/50 to-transparent rounded-full"></div>
+        <div className="mt-8 pt-8 border-t border-gray-700">
+          <div className="w-full h-1 bg-gradient-to-r from-transparent via-red-500/50 to-transparent rounded-full"></div>
         </div>
       </div>
     </footer>
