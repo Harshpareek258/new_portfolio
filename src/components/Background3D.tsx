@@ -64,7 +64,7 @@ const Background3D: React.FC = () => {
 
         ctx.save();
         ctx.globalAlpha = this.opacity * scale;
-        ctx.fillStyle = `hsl(${30 + this.z / 10}, 70%, ${50 + scale * 30}%)`;
+        ctx.fillStyle = '#FF921C';
         ctx.beginPath();
         ctx.arc(x2d, y2d, size2d, 0, Math.PI * 2);
         ctx.fill();
@@ -124,8 +124,8 @@ const Background3D: React.FC = () => {
     // Create particles and wireframe nodes
     const particles: Particle[] = [];
     const wireframeNodes: WireframeNode[] = [];
-    const particleCount = window.innerWidth < 768 ? 30 : 60;
-    const nodeCount = 20;
+    const particleCount = window.innerWidth < 768 ? 50 : 100;
+    const nodeCount = 30;
 
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
@@ -153,7 +153,7 @@ const Background3D: React.FC = () => {
 
       // Draw connections between nearby wireframe nodes
       ctx.strokeStyle = '#FF921C';
-      ctx.globalAlpha = 0.2;
+      ctx.globalAlpha = 0.3;
       ctx.lineWidth = 0.5;
       
       for (let i = 0; i < wireframeNodes.length; i++) {
@@ -195,16 +195,16 @@ const Background3D: React.FC = () => {
       {/* 3D Particle Canvas */}
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 -z-10 opacity-40"
+        className="fixed inset-0 -z-10 opacity-60"
         style={{ pointerEvents: 'none' }}
       />
       
       {/* Additional geometric elements */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 border border-[#FF921C]/20 rotate-45 animate-spin-slow"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 border border-[#FF921C]/30 rotate-12 animate-pulse"></div>
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 border border-[#FF921C]/10 rotate-45 animate-bounce-slow"></div>
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 border border-[#FF921C]/25 -rotate-12 animate-pulse"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 border border-[#FF921C]/30 rotate-45 animate-spin-slow"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 border border-[#FF921C]/40 rotate-12 animate-pulse"></div>
+        <div className="absolute bottom-32 left-1/4 w-40 h-40 border border-[#FF921C]/20 rotate-45 animate-bounce-slow"></div>
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 border border-[#FF921C]/35 -rotate-12 animate-pulse"></div>
       </div>
     </>
   );
