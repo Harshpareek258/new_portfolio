@@ -12,7 +12,7 @@
   }
   
   body {
-    @apply bg-white text-gray-800;
+    @apply bg-[#2c2e39] text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
@@ -20,7 +20,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-xl border border-red-100 shadow-2xl shadow-red-500/10;
+    @apply bg-[#3a3d4a]/50 backdrop-blur-xl border border-[#FF921C]/20 shadow-2xl shadow-[#FF921C]/10;
   }
   
   .animate-float {
@@ -77,10 +77,10 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px rgba(185, 28, 28, 0.5);
+    box-shadow: 0 0 20px rgba(255, 146, 28, 0.5);
   }
   to {
-    box-shadow: 0 0 30px rgba(185, 28, 28, 0.8), 0 0 40px rgba(220, 38, 38, 0.3);
+    box-shadow: 0 0 30px rgba(255, 146, 28, 0.8), 0 0 40px rgba(255, 184, 77, 0.3);
   }
 }
 
@@ -133,25 +133,25 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-red-100;
+  @apply bg-[#2c2e39];
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-red-500 to-red-600 rounded-full;
+  @apply bg-gradient-to-b from-[#FF921C] to-[#FFB84D] rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply from-red-400 to-red-500;
+  @apply from-[#FFB84D] to-[#FF921C];
 }
 
 /* Selection color */
 ::selection {
-  @apply bg-red-500/30 text-gray-800;
+  @apply bg-[#FF921C]/30 text-white;
 }
 
 /* Focus styles */
 *:focus {
-  outline: 2px solid theme('colors.red.500');
+  outline: 2px solid theme('colors.orange.500');
   outline-offset: 2px;
 }
 
@@ -209,7 +209,7 @@ button, .cursor-pointer {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(239, 68, 68, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(255, 146, 28, 0.1), transparent);
   transform: rotate(45deg);
   transition: transform 0.6s;
   z-index: 0;
@@ -253,7 +253,7 @@ button, .cursor-pointer {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: conic-gradient(from 0deg, transparent, rgba(239, 68, 68, 0.3), transparent);
+  background: conic-gradient(from 0deg, transparent, rgba(255, 146, 28, 0.3), transparent);
   animation: rotate 4s linear infinite;
   opacity: 0;
   transition: opacity 0.3s;
@@ -270,7 +270,7 @@ button, .cursor-pointer {
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 20px rgba(239, 68, 68, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 146, 28, 0.2);
 }
 
 /* Glowing text effect */
@@ -282,13 +282,13 @@ button, .cursor-pointer {
   text-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
 }
 
-/* Red theme specific styles */
-.bg-red-gradient {
-  background: linear-gradient(135deg, #dc2626, #b91c1c);
+/* Orange theme specific styles */
+.bg-orange-gradient {
+  background: linear-gradient(135deg, #FF921C, #FFB84D);
 }
 
-.text-red-gradient {
-  background: linear-gradient(135deg, #dc2626, #b91c1c);
+.text-orange-gradient {
+  background: linear-gradient(135deg, #FF921C, #FFB84D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -318,8 +318,8 @@ button, .cursor-pointer {
 /* Animated background patterns */
 .bg-pattern {
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 25% 25%, rgba(255, 146, 28, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 184, 77, 0.1) 0%, transparent 50%);
   background-size: 100px 100px;
   animation: pattern-move 20s linear infinite;
 }
@@ -331,24 +331,24 @@ button, .cursor-pointer {
 
 /* Enhanced button styles */
 .btn-primary {
-  background: linear-gradient(135deg, #dc2626, #b91c1c);
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+  background: linear-gradient(135deg, #FF921C, #FFB84D);
+  box-shadow: 0 4px 15px rgba(255, 146, 28, 0.4);
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6);
+  box-shadow: 0 8px 25px rgba(255, 146, 28, 0.6);
 }
 
 .btn-secondary {
-  border: 2px solid #dc2626;
-  color: #dc2626;
+  border: 2px solid #FF921C;
+  color: #FF921C;
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background: #dc2626;
+  background: #FF921C;
   color: white;
   transform: translateY(-2px);
 }
