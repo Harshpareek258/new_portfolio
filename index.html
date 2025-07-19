@@ -30,11 +30,74 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Social Links positioned on left side -->
+    <style>
+      .social-links {
+        position: fixed;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        z-index: 100;
+      }
+      
+      .social-link {
+        width: 50px;
+        height: 50px;
+        background: white;
+        border: 2px solid #B3003B;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #B3003B;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .dark .social-link {
+        background: #2D2D2D;
+        color: #B3003B;
+      }
+      
+      .social-link:hover {
+        background: #B3003B;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(179, 0, 59, 0.3);
+      }
+      
+      @media (max-width: 768px) {
+        .social-links {
+          position: static;
+          flex-direction: row;
+          justify-content: center;
+          margin: 2rem 0;
+          transform: none;
+        }
+      }
+    </style>
+    
     <!-- Theme color -->
     <meta name="theme-color" content="#B3003B">
 </head>
 <body>
-                    : 'rgba(255, 255, 255, 0.95)';
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="https://github.com/Harshpareek258" target="_blank" class="social-link" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/harshpareek258" target="_blank" class="social-link" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://instagram.com/harshpareek_258" target="_blank" class="social-link" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 </body>
